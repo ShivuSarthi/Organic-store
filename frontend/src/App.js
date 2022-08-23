@@ -50,7 +50,6 @@ function App() {
 
   async function getStripeApiKey() {
     const { data } = await axios.get("/api/v1/stripeapikey");
-    console.log(data);
 
     setStripeApiKey(data.stripeApiKey);
   }
@@ -66,8 +65,6 @@ function App() {
 
     getStripeApiKey();
   }, []);
-
-  console.log("stripeApiKey", stripeApiKey);
 
   window.addEventListener("contextmenu", (e) => e.preventDefault());
 
