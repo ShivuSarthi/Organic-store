@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema({
   avatar: {
     public_id: {
       type: String,
-      // required: true,
+      required: true,
     },
     url: {
       type: String,
-      // required: true,
+      required: true,
     },
   },
   role: {
@@ -46,8 +46,10 @@ const userSchema = new mongoose.Schema({
   resetPasswordExpire: Date,
 });
 
+// Before saving the data this function call
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
+    // if the user is not update the password, this condition works
     next();
   }
 

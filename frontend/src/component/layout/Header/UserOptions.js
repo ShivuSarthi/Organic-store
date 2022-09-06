@@ -58,7 +58,9 @@ const UserOptions = ({ user }) => {
   }
   function logoutUser() {
     dispatch(logout());
+    localStorage.clear();
     alert.success("Logout Successfully");
+    window.location.reload();
   }
 
   return (

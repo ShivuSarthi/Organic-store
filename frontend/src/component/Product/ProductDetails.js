@@ -137,12 +137,27 @@ const ProductDetails = ({ match }) => {
                 <h1>{`₹${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
                   <div className="detailsBlock-3-1-1">
-                    <button onClick={decreaseQuantity}>-</button>
-                    <input readOnly type="number" value={quantity} />
-                    <button onClick={increaseQuantity}>+</button>
+                    <button
+                      onClick={decreaseQuantity}
+                      hidden={product.Stock < 1 ? true : false}
+                    >
+                      -
+                    </button>
+                    <input
+                      readOnly
+                      type="number"
+                      value={quantity}
+                      hidden={product.Stock < 1 ? true : false}
+                    />
+                    <button
+                      onClick={increaseQuantity}
+                      hidden={product.Stock < 1 ? true : false}
+                    >
+                      +
+                    </button>
                   </div>
                   <button
-                    disabled={product.Stock < 1 ? true : false}
+                    hidden={product.Stock < 1 ? true : false}
                     onClick={addToCartHandler}
                   >
                     Add to Cart
