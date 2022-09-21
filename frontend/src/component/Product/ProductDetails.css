@@ -33,7 +33,7 @@
 
 .detailsBlock-1 > p {
   color: rgba(54, 54, 54, 0.582);
-  font: 200 0.6vmax cursive;
+  font: 200 0.6vmax  inherit;
 }
 
 .detailsBlock-2 {
@@ -47,7 +47,7 @@
 }
 
 .detailsBlock-2-span {
-  font: 200 0.8vmax cursive;
+  font: 200 0.8vmax  inherit;
   color: rgba(0, 0, 0, 0.699);
 }
 
@@ -92,7 +92,7 @@
   cursor: pointer;
   color: white;
   transition: all 0.5s;
-  background-color: tomato;
+  background-color: #5B6ABA;
   font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.5vmax 2vmax;
@@ -125,7 +125,7 @@
 
 .submitReview {
   border: none;
-  background-color: tomato;
+  background-color: #5B6ABA;
   font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.6vmax 2vmax;
@@ -188,7 +188,7 @@
 }
 .reviewCardComment {
   color: rgba(0, 0, 0, 0.445);
-  font: 300 0.8vmax cursive;
+  font: 300 0.8vmax  inherit;
 }
 
 .noReviews {
@@ -279,6 +279,6 @@
     font: 600 3vw "Roboto";
   }
   .reviewCardComment {
-    font: 300 5vw cursive;
+    font: 300 5vw  inherit;
   }
 }

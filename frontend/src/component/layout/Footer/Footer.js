@@ -17,7 +17,9 @@ const Footer = () => {
         <h1>ECOMMERCE.</h1>
         <p>High Quality is our first priority</p>
 
-        <p>Copyrights 2021 &copy; Shiva</p>
+        <p data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+          Copyrights 2021 &copy; Shiva
+        </p>
       </div>
 
       <div className="rightFooter">

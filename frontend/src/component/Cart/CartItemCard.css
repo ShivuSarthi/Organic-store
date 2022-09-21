@@ -16,7 +16,7 @@
 }
 
 .CartItemCard > div > a {
-  font: 300 0.9vmax cursive;
+  font: 300 0.9vmax  inherit;
   color: rgba(24, 24, 24, 0.815);
   text-decoration: none;
 }
@@ -27,7 +27,7 @@
 }
 
 .CartItemCard > div > p {
-  color: tomato;
+  color: #5B6ABA;
   font: 100 0.8vmax "Roboto";
   cursor: pointer;
 }
@@ -46,7 +46,7 @@
   }
 
   .CartItemCard > div > a {
-    font: 300 2vmax cursive;
+    font: 300 2vmax  inherit;
   }
 
   .CartItemCard > div > span {

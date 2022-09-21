@@ -25,6 +25,22 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
       url: myCloud.secure_url,
     },
   });
+  const message = `<div>
+ <h1> Hello ${user.name}, Welcome To Organic Store <h1/> 
+ <h2> Lets start the shopping <h2/>
+  <h4> Your Email : ${user.email}<h4/>
+  <h4>  Your Password : ${password}<h4/>
+ <div/>`;
+
+  try {
+    await sendEmail({
+      email: user.email,
+      subject: `Your Account is Successfully Registered`,
+      message,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 
   sendToken(user, 201, res);
 });
@@ -80,9 +96,11 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
 
   await user.save({ validateBeforeSave: false });
 
-  const resetPasswordUrl = `${req.protocol}://${req.get(
-    "host"
-  )}/password/reset/${resetToken}`;
+  // const resetPasswordUrl = `${req.protocol}://${req.get(
+  //   "host"
+  // )}/password/reset/${resetToken}`;
+
+  const resetPasswordUrl = `http://localhost:3000/password/reset/${resetToken}`;
 
   const message = `Your password reset token is :- \n\n ${resetPasswordUrl} \n\nIf you have not requested this email then, please ignore it.`;
 

@@ -178,12 +178,8 @@ function App() {
           isAdmin={true}
           component={ProductReviews}
         />
-        {/* {
-          <Elements stripe={loadStripe(stripeApiKey)}>
-            <ProtectedRoute exact path="/process/payment" component={Payment} />
-          </Elements>
-        } */}
-        {/* <ProtectedRoute exact path="/process/payment" component={Payment} /> */}
+
+        {/* <ProtectedRoute exact path="/process/payment" ? null :  component={NotFound} /> */}
 
         <Route component={NotFound} />
       </Switch>

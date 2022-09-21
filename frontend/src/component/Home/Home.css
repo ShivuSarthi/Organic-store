@@ -1,9 +1,11 @@
 .banner {
-  background-image: url("../../images/bg.jpg");
+  background-image: url("../../images/bg.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vmin;
+  height: 50vmax;
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -16,8 +18,8 @@
   margin: 5vmax;
 
   font: 600 2.5vmax "Roboto";
-  font-family: cursive;
-  color:black;
+  font-family:inherit;
+  color:#ffffff;
 }
 
 .banner > p {
@@ -108,7 +110,7 @@
 
 .productCard > span {
   margin: 0.5vmax;
-  color: tomato;
+  color: #5B6ABA;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1vmax;
 }

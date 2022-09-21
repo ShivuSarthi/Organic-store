@@ -4,12 +4,8 @@
   "description": "",
   "main": "backend/server.js",
 
-  "engines": {
-    "node": "16.13.0"
-  },
-  "engines": {
-    "npm": " 8.1.0"
-  },
+ 
+
  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,5 +28,10 @@
     "nodemailer": "^6.6.3",
     "stripe": "^8.174.0",
     "validator": "^13.6.0"
+  },
+
+  "engines": {
+    "node": "16.13.0",
+    "npm": " 8.1.0"
   }
 }

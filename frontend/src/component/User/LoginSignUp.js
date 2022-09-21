@@ -114,6 +114,7 @@ const LoginSignUp = ({ history, location }) => {
                 </div>
                 <button ref={switcherTab}></button>
               </div>
+              {/* Login Form  */}
               <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
                 <div className="loginEmail">
                   <MailOutlineIcon />
@@ -138,6 +139,8 @@ const LoginSignUp = ({ history, location }) => {
                 <Link to="/password/forgot">Forget Password ?</Link>
                 <input type="submit" value="Login" className="loginBtn" />
               </form>
+
+              {/* SignUp Form */}
               <form
                 className="signUpForm"
                 ref={registerTab}

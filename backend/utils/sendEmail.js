@@ -12,10 +12,10 @@ const sendEmail = async (options) => {
   });
 
   const mailOptions = {
-    from: process.env.SMPT_MAIL,
+    from: "shivasarthi8219@gmail.com",
     to: options.email,
     subject: options.subject,
-    text: options.message,
+    html: `<div> ${options.message} <div/>`,
   };
 
   await transporter.sendMail(mailOptions);
